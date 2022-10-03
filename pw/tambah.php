@@ -16,6 +16,11 @@ if (isset($_POST['tambah'])) {
   }
 }
 ?>
+
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,29 +34,22 @@ if (isset($_POST['tambah'])) {
 <body>
   <h3>Form Tambah Data Buku</h3>
   <form action="" method="POST">
-    <ul>
-      <li>
-        <label>
-          Judul Buku :
-          <input type="text" name="judul_buku" autofocus required>
-        </label>
-      </li>
-      <li>
-        <label>
-          Nama Pengarang :
-          <input type="text" name="nama_pengarang" required>
-        </label>
-      </li>
-      <li>
-        Gambar :
-        <input type="text" name="gambar" required>
-      </li>
-      <li>
-        <button type="submit" name="tambah">Tambah Data!</button>
-      </li>
-    </ul>
-
+    <div class="mb-3">
+      <label class="form-label">Judul Buku</label>
+      <input type="text" name="judul_buku" class="form-control"autofocus required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Nama Pengarang</label>
+      <input type="text" name="nama_pengarang" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Gambar</label>
+      <input type="text" name="gambar" class="form-control" required>
+    </div>
+    <button type="submit" name="tambah" class="btn btn-primary">Tambah Data</button>
   </form>
 </body>
+
+
 
 </html>
