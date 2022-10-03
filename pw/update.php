@@ -39,29 +39,19 @@ if (isset($_POST['update'])) {
   <h3>Form Ubah Data Buku</h3>
   <form action="" method="POST">
     <input type="hidden" name="id" value="<?= $bk['id']; ?>">
-    <ul>
-      <li>
-        <label>
-          Nama Buku:
-          <input type="text" name="judul_buku" autofocus required value="<?= $bk['judul_buku']; ?>">
-        </label>
-      </li>
-      <li>
-        <label>
-          Nama Pengarang :
-          <input type="text" name="nama_pengarang" required value="<?= $bk['nama_pengarang']; ?>">
-        </label>
-      </li>
-      <li>
-        <label>
-          Gambar :
-          <input type="text" name="gambar" required value="<?= $bk['gambar']; ?>">
-        </label>
-      </li>
-      <li>
-        <button type="submit" name="update">Ubah Data!</button>
-      </li>
-    </ul>
+    <div class="mb-3">
+      <label class="form-label">Judul Buku</label>
+      <input type="text" name="judul_buku" class="form-control" autofocus required value="<?= $bk['judul_buku']; ?>">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Nama Pengarang</label>
+      <input type="text" name="nama_pengarang" class="form-control" required value="<?= $bk['nama_pengarang']; ?>">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Gambar</label>
+      <input type="text" name="gambar" class="form-control" required value="<?= $bk['gambar']; ?>">
+    </div>
+    <button type="submit" name="update" class="btn btn-primary">Ubah Data</button>
   </form>
 </body>
 

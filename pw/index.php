@@ -21,11 +21,11 @@ $buku = query("SELECT * FROM buku");
 
 <body>
     <div class="container ">
-    <div class="card mt-5 bg-dark bg-gradient text-light">
+        <div class="card mt-5 bg-dark bg-gradient text-light">
             <div class="card-body text-light">
                 <h1 class="display-3 text-center fw-bold ">Daftar Buku</h1>
                 <a href="tambah.php">Tambah Data Buku</a>
-  <br><br>
+                <br><br>
                 <table class="table table-bordered table-striped table-hover text-center bg-info">
                     <tr>
                         <th>No</th>
@@ -42,10 +42,10 @@ $buku = query("SELECT * FROM buku");
                             <td><?= $bk['nama_pengarang']; ?></td>
                             <td><img src="asset/<?= $bk['gambar'] ?>" width="100"></td>
                             <td>
-                            <a href="detail.php?id=<?= $bk['id']; ?>">Lihat detail</a>
+                                <a href="detail.php?id=<?= $bk['id']; ?>">Lihat detail</a>
                             </td>
                         </tr>
-                        <?php endforeach; ?>
+                    <?php endforeach; ?>
                 </table>
                 <a href="logout.php">Logout</a>
             </div>
